@@ -70,3 +70,8 @@ h1 a{
   cursor: pointer;
   color: blueviolet;
 }
+h1 a{
+  color: blueviolet;
+  text-decoration: none;
+  cursor: pointer;
+}
