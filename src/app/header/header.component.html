@@ -12,10 +12,10 @@
             <li><a routerLink="cart">Cart(0)</a></li>
         </ul>
         <ul *ngSwitchCase="'seller'">
-            <li><a routerLink="">Product List</a></li><!--Binding links to components-->
-            <li><a routerLink="seller-auth">Add Product</a></li>
-            <li><a routerLink="#">Logout</a></li>
-            <li><a routerLink="#">Seller Name</a></li>
+            <li><a routerLink="seller-home">Product List</a></li><!--Binding links to components-->
+            <li><a routerLink="seller-add-product">Add Product</a></li>
+            <li><a  (click)="logout()">Logout</a></li>
+            <li><a routerLink="#">{{sellerName | titlecase}}</a></li><!--To make first letter capital, use titlecase-->
         </ul>
     </div>
 </nav>
