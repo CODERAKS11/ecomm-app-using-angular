@@ -22,6 +22,7 @@ export class SellerAddProductComponent implements OnInit {
       console.warn(result);
       if (result) {
         this.addProductMessage = 'Product added successfully';
+        
       } else {
         this.errorAddProductMessage = 'Product not added';
       }
