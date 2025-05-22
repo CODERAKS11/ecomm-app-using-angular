@@ -57,31 +57,13 @@
   ],
   "products": [
     {
-      "id": "8be8",
-      "name": "samsung m 40",
-      "price": "40000",
-      "color": "red",
-      "category": "mobile",
-      "description": "samsung",
-      "image": "https://th.bing.com/th/id/OIP.COe6-Wc8w6DI0OepV_enZwHaGu?w=210&h=191&c=7&r=0&o=7&cb=iwp2&dpr=1.3&pid=1.7&rm=3"
-    },
-    {
-      "id": "7007",
-      "name": "iphone 14",
-      "price": "100000",
-      "color": "red",
-      "category": "mobiles",
-      "description": "Apple",
-      "image": "https://th.bing.com/th/id/OIP.Nx4tI4v5B1cIYctF2G93wgHaJP?w=160&h=200&c=7&r=0&o=7&cb=iwp2&dpr=1.3&pid=1.7&rm=3"
-    },
-    {
-      "id": "651c",
-      "name": "iphone 15",
-      "price": "120000",
-      "color": "black",
-      "category": "mobiles",
-      "description": "Apple",
-      "image": "https://th.bing.com/th/id/OIP.Nx4tI4v5B1cIYctF2G93wgHaJP?w=160&h=200&c=7&r=0&o=7&cb=iwp2&dpr=1.3&pid=1.7&rm=3"
+      "name": "Laptop",
+      "price": "70000",
+      "color": "silver",
+      "category": "Laptop",
+      "description": "HP Lap with graphics",
+      "image": "https://th.bing.com/th/id/OIP.Nx4tI4v5B1cIYctF2G93wgHaJP?w=160&h=200&c=7&r=0&o=7&cb=iwp2&dpr=1.3&pid=1.7&rm=3",
+      "id": "da82"
     }
   ]
 }
