@@ -1,5 +1,7 @@
 <div class="add-product">
     <h1 class="add-product-heading">Add New Products</h1>
+    <p *ngIf="addProductMessage" class="message-p">{{ addProductMessage }}</p>
+    <p *ngIf="errorAddProductMessage" class="error-p">{{ errorAddProductMessage }}</p>
     <form #addProduct = "ngForm" (ngSubmit)="submit(addProduct.value)" class="common-form" >
         <input
         type="text"
