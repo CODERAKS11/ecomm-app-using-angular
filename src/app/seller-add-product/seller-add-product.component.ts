@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-seller-add-product',
   templateUrl: './seller-add-product.component.html',
-  styleUrl: './seller-add-product.component.css'
+  styleUrls: ['./seller-add-product.component.css']
 })
-export class SellerAddProductComponent {
+export class SellerAddProductComponent implements OnInit {
+  constructor() { }
+
+  ngOnInit(): void {
+    // Initialization logic here
+  }
+
+  submit(data: object) {
+    console.warn('Product data:', data);
+  }
 
 }
