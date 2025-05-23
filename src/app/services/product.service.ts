@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { product } from '../data-type';
+import {  product } from '../data-type';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -31,4 +32,14 @@ export class ProductService {
   trendyProducts() {
     return this.http.get<product[]>('http://localhost:3000/products?_limit=8');
   }
+  searchProducts(query: string): Observable<product[]> {
+  return this.http.get<product[]>(`http://localhost:3000/products`).pipe(
+    map((products: product[]) =>
+      products.filter((item: product) =>
+        item.name.toLowerCase().includes(query.toLowerCase())
+      )
+    )
+  );
+}
+ 
 }
