@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { login, SignUp } from '../data-type';
+import { login, signUp } from '../data-type';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { EventEmitter } from '@angular/core';
@@ -12,7 +12,7 @@ export class SellerService {
   isSellerLoggedIn = new BehaviorSubject<boolean>(false);
   isLoginError = new EventEmitter<boolean>(false);
   constructor(private http: HttpClient, private router: Router) { }
-  userSignUp(data: SignUp) {
+  userSignUp(data: signUp) {
     this.http.post('http://localhost:3000/seller', data, { observe: 'response' }).subscribe((result) => {
         this.isSellerLoggedIn.next(true);
         localStorage.setItem('seller', JSON.stringify(result.body));

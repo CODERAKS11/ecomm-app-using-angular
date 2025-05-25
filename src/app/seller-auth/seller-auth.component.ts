@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SellerService } from '../services/seller.service';
 import { Route, Router } from '@angular/router';
-import { SignUp } from '../data-type';
+import { signUp } from '../data-type';
 
 @Component({
   selector: 'app-seller-auth',
@@ -21,12 +21,12 @@ export class SellerAuthComponent implements OnInit {
     this.seller.reloadSeller();
   }
 
-  signUp(data: SignUp): void {
+  signUp(data: signUp): void {
     console.warn(data);
     this.seller.userSignUp(data);
   }
 
-  login(data: SignUp): void {
+  login(data: signUp): void {
     this.authError = '';
     console.warn(data);
     this.seller.userLogin(data);
