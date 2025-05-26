@@ -40,6 +40,17 @@ export class ProductService {
       )
     )
   );
-}
+  }
+  localAddToCart(data: product) {
+    let cartData = [];
+    let localCart = localStorage.getItem('localCart');
+    if(!localCart){
+      localStorage.setItem('localCart', JSON.stringify(data));
+    }else{
+      cartData = JSON.parse(localCart);
+      cartData.push(data);
+      localStorage.setItem('localCart',JSON.stringify(cartData));
+    }
+  }
  
 }
