@@ -16,13 +16,13 @@
             <li><a routerLink="">Home</a></li><!--Binding links to components-->
             <li><a routerLink="seller-auth">Seller</a></li>
             <li><a routerLink="user-auth">Login/Sign-up</a></li>
-            <li><a routerLink="cart">Cart(0)</a></li>
+            <li><a routerLink="cart">Cart({{cartItems}})</a></li>
         </ul>
         <ul *ngSwitchCase="'seller'">
             <li><a routerLink="seller-home">Product List</a></li><!--Binding links to components-->
             <li><a routerLink="seller-add-product">Add Product</a></li>
             <li><a  (click)="logout()">Logout</a></li>
-            <li><a routerLink="#">{{sellerName | titlecase}}</a></li><!--To make first letter capital, use titlecase-->
+            <li><a href="#">Cart({{cartItems}})</a></li><!--To make first letter capital, use titlecase-->
         </ul>
     </div>
 </nav>

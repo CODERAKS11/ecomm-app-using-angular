@@ -11,7 +11,8 @@ import { product } from '../data-type';
 export class HeaderComponent implements OnInit {
   menuType: string = 'default';
   sellerName: string = '';
-  searchResult: undefined | Array<product>;
+  searchResult:undefined|product[];
+  cartItems=0;
   
   constructor(private route: Router, private product: ProductService) { }
 
@@ -33,7 +34,16 @@ export class HeaderComponent implements OnInit {
         }
       }
     });
+    let cartData= localStorage.getItem('localCart');
+    if(cartData){
+      this.cartItems= JSON.parse(cartData).length
+    }
+    this.product.cartData.subscribe((items)=>{
+      this.cartItems= items.length;
+    })
   }
+  
+  
   logout() {
     localStorage.removeItem('seller');
     this.route.navigate(['/']);
