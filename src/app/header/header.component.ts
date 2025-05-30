@@ -11,6 +11,7 @@ import { product } from '../data-type';
 export class HeaderComponent implements OnInit {
   menuType: string = 'default';
   sellerName: string = '';
+  userName:string="";
   searchResult:undefined|product[];
   cartItems=0;
   
@@ -29,7 +30,14 @@ export class HeaderComponent implements OnInit {
             this.sellerName = sellerData.name;
             
           }
-        } else{
+        } else if(localStorage.getItem('user')){
+          let userStore = localStorage.getItem('user');
+          let userData = userStore && JSON.parse(userStore);
+          this.userName = userData.name;
+          this.menuType = "user";
+          this.product.getCartList(userData.id);
+        }
+         else{
           this.menuType = 'default';
         }
       }
@@ -47,6 +55,11 @@ export class HeaderComponent implements OnInit {
   logout() {
     localStorage.removeItem('seller');
     this.route.navigate(['/']);
+  }
+  userLogout(){
+    localStorage.removeItem('user');
+    this.route.navigate(['/user-auth'])
+    this.product.cartData.emit([])
   }
   searchProduct(query:KeyboardEvent){
     if(query){
