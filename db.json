@@ -140,55 +140,14 @@
       "password": "123"
     }
   ],
-  "cart": [
-    {
-      "id": "cab8",
-      "name": "I phone 14",
-      "price": "100000",
-      "category": "mobile",
-      "color": "black",
-      "description": "An Apple Product",
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
-      "quantity": 1,
-      "productId": "2",
-      "userId": "1"
-    },
-    {
-      "id": "a2a0",
-      "name": "Nike Shoes",
-      "price": "3000",
-      "category": "Shoes",
-      "color": "Black",
-      "description": "Best shoes for Running",
-      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1eeaacc0-e07c-4024-a5f7-57f2fd23e8a2/air-max-270-g-golf-shoe-Z6vCfs.png",
-      "quantity": 1,
-      "productId": "4",
-      "userId": "1"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
-      "id": "8a3b",
+      "id": "db87",
       "email": "aks@gmail.com",
       "address": "aks",
-      "contact": "91991",
-      "totalPrice": 103100,
-      "userId": "1"
-    },
-    {
-      "id": "6976",
-      "email": "aks@gmail.com",
-      "address": "aks",
-      "contact": "99999",
-      "totalPrice": 94860,
-      "userId": "1"
-    },
-    {
-      "id": "3801",
-      "email": "aks@gmail.com",
-      "address": "kvve",
       "contact": "9999",
-      "totalPrice": 94860,
+      "totalPrice": 104060,
       "userId": "1"
     }
   ]
